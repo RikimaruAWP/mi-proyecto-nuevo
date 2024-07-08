@@ -1,12 +1,8 @@
-/**
-* Playlist component
-*/
-const SpotifyPlayer = (prop) => {
-    const urlSong = "https://open.spotify.com/embed/album/" + prop.url;
+
+export const SpotifyPlayer = (url, favorite) => {
+    const urlSong =  "https://open.spotify.com/embed/album/" + url;
     const favorite = prop.favorite;
-    /**
-    * Render que se ejecuta si el album es favorito
-    */
+
    if (favorite) {
        return (
     <div className="d-flex my-5" width="1000px">
@@ -18,9 +14,6 @@ const SpotifyPlayer = (prop) => {
     </div>
     )
 }
-    /**
-    * Render que se ejecuta si el album no es favorito
-    */
    else {
        return (
        <div className="d-flex my-5" width="1000px">
