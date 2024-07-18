@@ -1,6 +1,10 @@
 import {SpotifyPlayer} from "./SpotityPlayer"
 
 export const MyPlaylist = () => {
+    playlist = [{ url: '33qkK1brpt6t8unIpeM2Oy', favorite: true },
+{ url: '0H6TddUF2M63ZSHGvhk5yy', favorite: true },
+{ url: '3fn4HfVz5dhmE0PG24rh6h', favorite: true },
+{ url: '0DQyTVcDhK9wm0f6RaErWO', favorite: true }];
     return (
     <div className='container'>
         <h1 className='title text-center mt-5'>My favorite songs</h1>
@@ -19,6 +23,11 @@ export const MyPlaylist = () => {
         <div>
             <SpotifyPlayer url="" favorite= {true}/>
         </div>
+        <div>
+{
+playlist.map(song => <SpotifyPlayer url={song.url} favorite={song.favorite} />)
+}
+</div>
     </div>
     )
 }

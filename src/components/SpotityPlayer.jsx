@@ -1,7 +1,9 @@
+import { MyPlaylist } from "./components/MyPlaylist"
+export const App = () => <MyPlaylist/>
 
 export const SpotifyPlayer = (url, favorite) => {
     const urlSong =  "https://open.spotify.com/embed/album/" + url;
-    const favorite = prop.favorite;
+    const favoriteSong = favorite;
 
    if (favorite) {
        return (
@@ -23,6 +25,7 @@ export const SpotifyPlayer = (url, favorite) => {
             <i className="bi bi-star"></i>
             </button>
     </div>
+    
         )
     }
 }
